@@ -6,8 +6,11 @@
 <style>
     body { font-family: "Microsoft JhengHei", "Heiti TC", sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; color: #333; }
     h2 { text-align: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
-    .header-info { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.1em; }
-    .name-row { font-size: 1.2em; margin: 20px 0; border-bottom: 1px dashed #ccc; padding-bottom: 15px; line-height: 1.8; }
+    
+    /* 頂部資訊區塊樣式 */
+    .top-info { font-size: 1.2em; line-height: 1.8; margin-bottom: 10px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; }
+    .info-row { display: flex; align-items: center; flex-wrap: wrap; gap: 30px; margin-bottom: 8px; }
+    
     .section-title { background-color: #f4f4f4; padding: 5px 10px; font-weight: bold; margin-top: 20px; border-left: 5px solid #4a90e2; }
     .desc { font-size: 0.9em; color: #666; margin-bottom: 10px; font-style: italic; margin-left: 10px; }
     
@@ -35,31 +38,43 @@
 
     <h2>泌尿科門診症狀勾選單</h2>
 
-    <div class="header-info">
-        <span>18 診 _______ 號</span>
-        <span>血壓：_______ / _______ mmHg</span>
-    </div>
-
-    <div class="name-row">
-        <div>姓名：___ OO &nbsp;&nbsp;&nbsp;&nbsp; 性別：<input type="checkbox">男 <input type="checkbox">女</div>
-        <div>年齡：______ 歲</div>
-        <div style="font-size: 0.8em; margin-top: 5px;">症狀出現多久時間：____________________</div>
+    <div class="top-info">
+        <div class="info-row">
+            <span>18 診 _______ 號</span>
+            <span>姓名：___ OO</span>
+        </div>
+        
+        <div class="info-row">
+            <span>性別：<input type="checkbox">男 <input type="checkbox">女</span>
+            <span>年齡：______ 歲</span>
+        </div>
+        
+        <div class="info-row">
+            <span>血壓：_______ / _______ mmHg</span>
+        </div>
+        
+        <div class="info-row" style="font-size: 0.8em; margin-top: 5px;">
+            <span>症狀出現多久時間：____________________</span>
+        </div>
     </div>
 
     <div class="section-title">一、排尿功能障礙</div>
     <div class="desc">排尿是否順暢、尿量與頻率問題</div>
     <div class="grid-container">
+        <div class="grid-item"><input type="checkbox">排尿變弱</div>
+        <div class="grid-item"><input type="checkbox">排尿困難</div>
+        <div class="grid-item"><input type="checkbox">需用力排尿</div>
         <div class="grid-item"><input type="checkbox">頻尿</div>
+        
         <div class="grid-item"><input type="checkbox">夜尿</div>
         <div class="grid-item"><input type="checkbox">尿急</div>
+        <div class="grid-item"><input type="checkbox">尿失禁</div>
         <div class="grid-item"><input type="checkbox">殘尿感</div>
-        <div class="grid-item"><input type="checkbox">解尿困難</div>
+        
         <div class="grid-item"><input type="checkbox">滴尿</div>
         <div class="grid-item"><input type="checkbox">尿分叉</div>
         <div class="grid-item"><input type="checkbox">突然解不出來</div>
-        <div class="grid-item"><input type="checkbox">排尿變弱</div>
-        <div class="grid-item"><input type="checkbox">需用力排尿</div>
-        <div class="grid-item" style="grid-column: span 2;"><input type="checkbox">其他：__________</div>
+        <div class="grid-item"><input type="checkbox">其他：__________</div>
     </div>
 
     <div class="section-title">二、感染、外觀與疼痛不適</div>
