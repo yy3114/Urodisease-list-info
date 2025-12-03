@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>泌尿科門診症狀勾選單(雙浮水印版)</title>
+<title>泌尿科門診症狀勾選單(位置修正版)</title>
 <style>
     body {
         font-family: "Microsoft JhengHei", "Heiti TC", sans-serif;
@@ -27,13 +27,16 @@
         z-index: -1; /* 放在最底層 */
         pointer-events: none;
         
-        /* 這裡設定兩個印章的 SVG */
+        /* 兩個印章的 SVG 圖檔 */
         background-image: 
             url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='300' viewBox='0 0 500 300'><g transform='rotate(-15 250 150)' opacity='0.25'><rect x='10' y='10' width='480' height='280' rx='20' ry='20' fill='none' stroke='%23d9534f' stroke-width='12' stroke-dasharray='20,10'/><text x='50%' y='45%' dominant-baseline='middle' text-anchor='middle' fill='%23d9534f' font-size='90' font-weight='bold' font-family='Microsoft JhengHei'>診後銷毀</text><text x='50%' y='75%' dominant-baseline='middle' text-anchor='middle' fill='%23d9534f' font-size='40' font-weight='bold' font-family='Microsoft JhengHei'>僅供參考用</text></g></svg>"),
             url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='300' viewBox='0 0 500 300'><g transform='rotate(-15 250 150)' opacity='0.25'><rect x='10' y='10' width='480' height='280' rx='20' ry='20' fill='none' stroke='%23d9534f' stroke-width='12' stroke-dasharray='20,10'/><text x='50%' y='45%' dominant-baseline='middle' text-anchor='middle' fill='%23d9534f' font-size='90' font-weight='bold' font-family='Microsoft JhengHei'>診後銷毀</text><text x='50%' y='75%' dominant-baseline='middle' text-anchor='middle' fill='%23d9534f' font-size='40' font-weight='bold' font-family='Microsoft JhengHei'>僅供參考用</text></g></svg>");
         
-        /* 設定兩個印章的位置：一個在上方偏中，一個在下方偏中 */
-        background-position: center 20%, center 80%;
+        /* 【重要】位置調整：
+           第一個印章：center 25% (大約在第一大題位置)
+           第二個印章：center 65% (往上移，大約在第三大題位置，避開底部) */
+        background-position: center 25%, center 65%;
+        
         background-repeat: no-repeat, no-repeat;
         /* 設定印章大小 */
         background-size: 60% auto, 60% auto;
@@ -42,7 +45,7 @@
 
     h2 { text-align: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
     
-    /* 頂部資訊區塊樣式 - 背景加一點半透明白，避免字被浮水印干擾 */
+    /* 頂部資訊區塊樣式 */
     .top-info { font-size: 1.2em; line-height: 1.8; margin-bottom: 10px; border-bottom: 1px dashed #ccc; padding-bottom: 15px; background-color: rgba(255,255,255,0.7); }
     .info-row { display: flex; align-items: center; flex-wrap: wrap; gap: 30px; margin-bottom: 8px; }
     
@@ -50,7 +53,6 @@
     .desc { font-size: 0.9em; color: #666; margin-bottom: 10px; font-style: italic; margin-left: 10px; background-color: rgba(255,255,255,0.7); display: inline-block;}
     
     .grid-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 15px; }
-    /* 選項背景加一點半透明白，確保易讀 */
     .grid-item { display: flex; align-items: center; background-color: rgba(255,255,255,0.7); padding: 2px; border-radius: 4px; }
     
     .two-col { display: flex; gap: 20px; }
@@ -66,7 +68,7 @@
         font-size: 0.85em; 
         color: #555; 
         background-color: #f9f9f9; 
-        border: 2px dashed #d9534f; /* 紅色虛線框 */
+        border: 2px dashed #d9534f; 
         padding: 15px;
         border-radius: 5px;
         position: relative;
