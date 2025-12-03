@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
-<title>泌尿科門診症狀勾選單(位置修正版)</title>
+<title>泌尿科門診症狀勾選單(浮水印終極版)</title>
 <style>
     body {
         font-family: "Microsoft JhengHei", "Heiti TC", sans-serif;
@@ -33,9 +33,9 @@
             url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='300' viewBox='0 0 500 300'><g transform='rotate(-15 250 150)' opacity='0.25'><rect x='10' y='10' width='480' height='280' rx='20' ry='20' fill='none' stroke='%23d9534f' stroke-width='12' stroke-dasharray='20,10'/><text x='50%' y='45%' dominant-baseline='middle' text-anchor='middle' fill='%23d9534f' font-size='90' font-weight='bold' font-family='Microsoft JhengHei'>診後銷毀</text><text x='50%' y='75%' dominant-baseline='middle' text-anchor='middle' fill='%23d9534f' font-size='40' font-weight='bold' font-family='Microsoft JhengHei'>僅供參考用</text></g></svg>");
         
         /* 【重要】位置調整：
-           第一個印章：center 25% (大約在第一大題位置)
-           第二個印章：center 65% (往上移，大約在第三大題位置，避開底部) */
-        background-position: center 25%, center 65%;
+           第一個印章：center 25% (維持不變，在上方)
+           第二個印章：center 90% (調整至底部，準確壓在「備註」欄位上) */
+        background-position: center 25%, center 90%;
         
         background-repeat: no-repeat, no-repeat;
         /* 設定印章大小 */
@@ -61,7 +61,8 @@
 
     input[type="checkbox"] { transform: scale(1.2); margin-right: 8px; }
     
-    .footer-section { margin-top: 20px; border-top: 1px solid #333; padding-top: 20px; background-color: rgba(255,255,255,0.7); }
+    /* 底部區塊背景半透明，確保填寫時看得清楚，但又能透出後面的印章 */
+    .footer-section { margin-top: 20px; border-top: 1px solid #333; padding-top: 20px; background-color: rgba(255,255,255,0.6); }
     
     .disclaimer { 
         margin-top: 40px; 
