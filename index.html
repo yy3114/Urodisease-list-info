@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>泌尿科門診症狀勾選單</title>
+<style>
+    body { font-family: "Microsoft JhengHei", "Heiti TC", sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; color: #333; }
+    h2 { text-align: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+    .header-info { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 1.1em; }
+    .name-row { font-size: 1.2em; font-weight: bold; margin: 20px 0; border-bottom: 1px dashed #ccc; padding-bottom: 10px; }
+    .section-title { background-color: #f4f4f4; padding: 5px 10px; font-weight: bold; margin-top: 20px; border-left: 5px solid #4a90e2; }
+    .desc { font-size: 0.9em; color: #666; margin-bottom: 10px; font-style: italic; margin-left: 10px; }
+    
+    /* 格狀佈局 */
+    .grid-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 15px; }
+    .grid-item { display: flex; align-items: center; }
+    
+    /* 兩欄佈局 */
+    .two-col { display: flex; gap: 20px; }
+    .col { flex: 1; border: 1px solid #ddd; padding: 10px; border-radius: 5px; }
+    .col h4 { margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+
+    input[type="checkbox"] { transform: scale(1.2); margin-right: 8px; }
+    
+    .footer-section { margin-top: 20px; border-top: 1px solid #333; padding-top: 20px; }
+    .disclaimer { margin-top: 40px; font-size: 0.8em; color: #888; text-align: center; border-top: 1px dotted #ccc; padding-top: 10px; }
+    
+    /* 列印設定 */
+    @media print {
+        body { margin: 0; padding: 0; }
+        .section-title { -webkit-print-color-adjust: exact; }
+    }
+</style>
+</head>
+<body>
+
+    <h2>泌尿科門診症狀勾選單</h2>
+
+    <div class="header-info">
+        <span>18 診 _______ 號</span>
+        <span>血壓：_______ / _______ mmHg</span>
+    </div>
+
+    <div class="name-row">
+        姓名：___ OO &nbsp;&nbsp;&nbsp;&nbsp; 年齡：______ 歲
+        <div style="font-size: 0.8em; font-weight: normal; margin-top: 5px;">症狀出現多久時間：____________________</div>
+    </div>
+
+    <div class="section-title">一、排尿機能障礙</div>
+    <div class="desc">排尿是否順暢、尿量與頻率問題</div>
+    <div class="grid-container">
+        <div class="grid-item"><input type="checkbox">頻尿</div>
+        <div class="grid-item"><input type="checkbox">夜尿</div>
+        <div class="grid-item"><input type="checkbox">尿急</div>
+        <div class="grid-item"><input type="checkbox">殘尿感</div>
+        <div class="grid-item"><input type="checkbox">解尿困難</div>
+        <div class="grid-item"><input type="checkbox">滴尿</div>
+        <div class="grid-item"><input type="checkbox">尿分叉</div>
+        <div class="grid-item"><input type="checkbox">突然解不出來</div>
+        <div class="grid-item"><input type="checkbox">排尿變弱</div>
+        <div class="grid-item"><input type="checkbox">需用力排尿</div>
+        <div class="grid-item" style="grid-column: span 2;"><input type="checkbox">其他：__________</div>
+    </div>
+
+    <div class="section-title">二、感染、外觀與疼痛不適</div>
+    <div class="desc">尿液顏色、分泌物與身體疼痛/腫脹部位</div>
+    
+    <div class="two-col">
+        <div class="col">
+            <h4>1. 尿液與外觀異常</h4>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:5px;">
+                <div class="grid-item"><input type="checkbox">排尿痛</div>
+                <div class="grid-item"><input type="checkbox">血尿</div>
+                <div class="grid-item"><input type="checkbox">尿混濁</div>
+                <div class="grid-item"><input type="checkbox">尿臭味</div>
+                <div class="grid-item"><input type="checkbox">泡泡尿</div>
+                <div class="grid-item"><input type="checkbox">分泌物</div>
+                <div class="grid-item"><input type="checkbox">陰部搔癢</div>
+                <div class="grid-item"><input type="checkbox">睪丸腫</div>
+                <div class="grid-item"><input type="checkbox">腫大</div>
+                <div class="grid-item"><input type="checkbox">其他：____</div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>2. 疼痛部位</h4>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:5px;">
+                <div class="grid-item"><input type="checkbox">腰痛</div>
+                <div class="grid-item"><input type="checkbox">側腹痛</div>
+                <div class="grid-item"><input type="checkbox">上腹痛</div>
+                <div class="grid-item"><input type="checkbox">下腹痛</div>
+                <div class="grid-item"><input type="checkbox">會陰痛</div>
+                <div class="grid-item"><input type="checkbox">陰囊痛</div>
+                <div class="grid-item"><input type="checkbox">龜頭痛</div>
+                <div class="grid-item"><input type="checkbox">其他：____</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-title">三、性功能障礙</div>
+    <div class="grid-container">
+        <div class="grid-item"><input type="checkbox">勃起問題</div>
+        <div class="grid-item"><input type="checkbox">早洩</div>
+        <div class="grid-item"><input type="checkbox">缺乏性慾</div>
+        <div class="grid-item"><input type="checkbox">其他：__________</div>
+    </div>
+
+    <div class="section-title">四、全身與其他症狀</div>
+    
+    <p><strong>全身反應：</strong></p>
+    <div class="grid-container">
+        <div class="grid-item"><input type="checkbox">發燒</div>
+        <div class="grid-item"><input type="checkbox">畏寒</div>
+        <div class="grid-item"><input type="checkbox">無力</div>
+        <div class="grid-item"><input type="checkbox">噁心</div>
+        <div class="grid-item"><input type="checkbox">嘔吐</div>
+        <div class="grid-item"><input type="checkbox">頭痛</div>
+        <div class="grid-item"><input type="checkbox">胸痛</div>
+        <div class="grid-item"><input type="checkbox">其他：__________</div>
+    </div>
+
+    <p><strong>慢性疾病史：</strong></p>
+    <div class="grid-container">
+        <div class="grid-item"><input type="checkbox">高血壓</div>
+        <div class="grid-item"><input type="checkbox">糖尿病</div>
+        <div class="grid-item"><input type="checkbox">高血脂症</div>
+        <div class="grid-item"><input type="checkbox">其他：__________</div>
+    </div>
+
+    <div class="footer-section">
+        <p><strong>請幫我開：</strong> <input type="checkbox">藥丸 &nbsp; <input type="checkbox">藥粉 &nbsp; <input type="checkbox">藥水</p>
+        <p><strong>藥物過敏：</strong> <input type="checkbox">沒有 <input type="checkbox">有 (________________)</p>
+        <p><strong>有無服用凝血劑：</strong> <input type="checkbox">沒有 <input type="checkbox">有 (________________)</p>
+        <p><strong>有無開刀史：</strong> <input type="checkbox">沒有 <input type="checkbox">有</p>
+        <p><strong>備註：</strong> _______________________________________________________</p>
+    </div>
+
+    <div class="disclaimer">
+        免責聲明：此勾選單僅供參考用，不是正式病歷記載，看診完即銷毀。
+    </div>
+
+</body>
+</html>
